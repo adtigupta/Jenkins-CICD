@@ -32,7 +32,11 @@ pipeline {
                     cat Dockerfile
                     echo 'Buid Docker Image'
                  
-                    docker build -f python-jenkins-argocd-k8s/Dockerfile -t aditi:${BUILD_NUMBER} .
+                    docker build --no-cache \
+                -f python-jenkins-argocd-k8s/Dockerfile \
+              -t abhishekf5/cicd-e2e:${BUILD_NUMBER} \
+              python-jenkins-argocd-k8s
+            '''
 
                     '''
                 }

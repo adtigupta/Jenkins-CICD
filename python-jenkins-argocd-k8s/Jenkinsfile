@@ -29,6 +29,7 @@ pipeline {
             steps{
                 script{
                     sh '''
+                    cat Dockerfile
                     echo 'Buid Docker Image'
                     docker build --no-cache -t aditi:${BUILD_NUMBER} .
                     '''

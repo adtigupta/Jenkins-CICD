@@ -33,7 +33,7 @@ pipeline {
                     echo 'Buid Docker Image'
                     
                     docker build --no-cache \
-                       -f python-jenkins-argocd-k8s/Dockerfile \
+                    
                        -t aditig7890/cicd:${BUILD_NUMBER} \
                        python-jenkins-argocd-k8s
             

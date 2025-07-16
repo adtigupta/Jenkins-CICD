@@ -32,7 +32,7 @@ pipeline {
                     cat Dockerfile
                     echo 'Buid Docker Image'
                     
-                    docker build -f python-jenkins-argocd-k8s/ -t aditig7890/mine:${BUILD_NUMBER} .
+                    docker build -t aditig7890/mine:${BUILD_NUMBER} .
             
 
                     '''
